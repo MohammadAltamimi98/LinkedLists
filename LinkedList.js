@@ -74,11 +74,10 @@ class LinkedList {
 
   printData() {
     let current = this.head;
-    console.log(current);
-    // while (current) {
-    //   console.log(current);
-    //   current = current.next;
-    // }
+    while (current) {
+      console.log(current.data);
+      current = current.next;
+    }
   }
 
 }

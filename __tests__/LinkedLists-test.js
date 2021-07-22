@@ -15,9 +15,13 @@ describe('#insertAtHead', () => {
 })
 
 
-describe('#Get element by index', () => {
-  test('should return null when index is less than 0', () => {
+describe('#add an element at last', () => {
+  test('it adds an element at the last node', () => {
     const ll = new LinkedList();
+    test('should ', () => {
+      
+      
+    })
   })
 
 })
