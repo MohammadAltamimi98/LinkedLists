@@ -69,6 +69,12 @@ class LinkedList {
   }
 
 
+  // insert data at a certain index
+  insertAtIndex(data,index){
+
+  }
+
+
 
   //print data
 

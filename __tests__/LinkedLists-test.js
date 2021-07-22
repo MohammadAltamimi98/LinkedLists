@@ -15,13 +15,13 @@ describe('#insertAtHead', () => {
 })
 
 
-describe('#add an element at last', () => {
-  test('it adds an element at the last node', () => {
-    const ll = new LinkedList();
-    test('should ', () => {
+// describe('#add an element at last', () => {
+//   test('it adds an element at the last node', () => {
+//     const ll = new LinkedList();
+//     test('should ', () => {
       
       
-    })
-  })
+//     })
+//   })
 
-})
+// })
