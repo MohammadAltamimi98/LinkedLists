@@ -23,9 +23,6 @@ node_C.next = node_D
 
 
 
-countNodes=(head)=>{
-
-}
 
 
 
