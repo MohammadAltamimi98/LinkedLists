@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/MohammadAltamimi98/LinkedLists/issues"
   },
-  "homepage": "https://github.com/MohammadAltamimi98/LinkedLists#readme"
+  "homepage": "https://github.com/MohammadAltamimi98/LinkedLists#readme",
+  "devDependencies": {
+    "jest": "^27.0.6"
+  }
 }

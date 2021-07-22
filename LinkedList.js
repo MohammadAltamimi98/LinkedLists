@@ -2,6 +2,7 @@
 
 // ** Define a node which will contain a constructor with data and next properties; when called and passed a value it will create a new object.
 
+
 class Node {
   constructor(data) {
     this.data = data;
@@ -20,10 +21,18 @@ node_B.next = node_C
 node_C.next = node_D
 
 // **although this works fine but its not functional hence we need to create a class for  LinkedLists
+//**create a constructor that has the head and length(optional) properties.
+
+class LinkedList {
+  constructor() {
+    this.head = null
+    this.length = 0
+  }
+}
 
 
 
 
-
+module.exports = LinkedList;
 
 console.log(node_A);
