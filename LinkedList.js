@@ -4,7 +4,7 @@
 
 
 class Node {
-  constructor(data, next) {
+  constructor(data, next = null) {
     this.data = data;
     this.next = next
   }
@@ -35,10 +35,50 @@ class LinkedList {
 
   //1. create a new node instance and set the data to the value and teh next attribute to this.head so that your new node's next method reference the previous one
   //2. define the head of your new linked list to be this newly created node
-  insertAtHead(value) {
-    const newNode = new Node(value, this.head);
+  insertAtHead(data) {
+    const newNode = new Node(data, this.head);
     this.head = newNode;
     this.length++;
+  }
+
+  // 1. define a new node
+  //2. define current
+  // if statement -- if the list is empty (how do we check for that ? !this.head  or this.head === null) then define the head as the new node ---
+  // else ===> where the list is not empty 1. define the current to be this.head to use as pointer
+  // 2. run a loop where the condition is (current.next) which means as long as the attribute next exists do the following.
+  //3. set the current = current.next to loop through the nodes.
+  //4. after the while and inside the else we define the next attribute of the current to equal this new node.
+  //5. outside the if-else statement increase the length.
+
+
+  insertLast(data) {
+    let newNode = new Node(data);
+    let current;
+
+    if (!this.head) {
+      this.head = newNode;
+    }
+    else {
+      current = this.head;
+      while (current.next) {
+        current = current.next
+      }
+      current.next = newNode;
+    }
+    this.length++;
+  }
+
+
+
+  //print data
+
+  printData() {
+    let current = this.head;
+    console.log(current);
+    // while (current) {
+    //   console.log(current);
+    //   current = current.next;
+    // }
   }
 
 }
