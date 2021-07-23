@@ -13,10 +13,11 @@ ll.insertAtIndex(1100, 10); // out of range
 ll.getAt(4);
 ll.removeAt(4);
 ll.removeAt(2);
-ll.clearAll();
+// ll.clearAll();
+// ll.reverseList()
 console.log(ll);
 
 
-
+ll.printData();
 
 ll.printData();
