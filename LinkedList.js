@@ -70,11 +70,85 @@ class LinkedList {
 
 
   // insert data at a certain index
-  insertAtIndex(data,index){
+  insertAtIndex(data, index) {
 
+    // edge case if index is more than zero but out of the length - out of range
+    if (index > 0 && index > this.length) {
+      return;
+    }
+
+    // if index is zero
+    if (index === 0) {
+      this.head = new Node(data, this.head);
+      return;
+    }
+
+    let node = new Node(data);
+    let current, previous;
+
+    current = this.head;
+    let count = 0;
+
+    // ex: linked list of four nodes >> insert 300 at index 2 >>
+    //1. define current to be this.head and start a count from zero
+    // 2. start a while loop while the countis less than index do the following 
+    // 3. set the previous to current (which is a pointer at this.head)
+    // 4. increase the count to step forward 
+    // 5.define the new current to be current.next 
+
+    while (count < index) {
+      previous = current;
+      count++;
+      current = current.next;
+    }
+
+    node.next = current;
+    previous.next = node;
+    this.length++;
   }
 
 
+  getAt(index) {
+    let current = this.head;
+    let count = 0;
+    while (current) {
+      if (count === index) {
+        console.log(current.data);
+      }
+      count++;
+      current = current.next;
+    }
+    return null;
+  }
+
+
+  removeAt(index) {
+    if (index > 0 && index > this.length) {
+      return;
+    }
+    let current = this.head;
+    let previous;
+    let count = 0;
+
+    // remove first
+    if (index === 0) {
+      this.head = current.next;
+    }
+    else {
+      while (count < index) {
+        count++;
+        previous = current;
+        current = current.next;
+      }
+      previous.next = current.next;
+    }
+    this.length--;
+  }
+
+  clearAll() {
+    this.head = null;
+    this.length = 0;
+  }
 
   //print data
 
