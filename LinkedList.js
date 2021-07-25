@@ -150,6 +150,60 @@ class LinkedList {
     this.length = 0;
   }
 
+
+  // add before
+  addbefore(value, valueToAddBefore) {
+
+    let current = this.head;
+    if (!current.next) {
+      return false
+    }
+
+    while (current.next) {
+      if (current.next.data === valueToAddBefore) {
+        const newNode = new Node(value);
+        newNode.next = current.next;
+        current.next = newNode;
+        return true;
+      }
+      current = current.next;
+    }
+    return false;
+  }
+
+  //add after
+
+  addAfter(value, value2A) {
+    let current = this.head;
+
+    if (!current) {
+      return false;
+    }
+    while (current) {
+      if (current.data === value2A) {
+        const newNode = new Node(value);
+        newNode.next = current.next;
+        current.next = newNode;
+        return true;
+      }
+      current = current.next;
+    }
+    return false;
+  }
+
+  // includes a value
+  includesVal(value) {
+
+    let current = this.head;
+    while (current) {
+      if (current.data === value)
+        return true;
+      current = current.next;
+
+    }
+    return false;
+  }
+
   //print data
 
   printData() {
