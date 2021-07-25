@@ -164,6 +164,7 @@ class LinkedList {
         const newNode = new Node(value);
         newNode.next = current.next;
         current.next = newNode;
+        this.length++;
         return true;
       }
       current = current.next;
@@ -184,6 +185,7 @@ class LinkedList {
         const newNode = new Node(value);
         newNode.next = current.next;
         current.next = newNode;
+        this.length++;
         return true;
       }
       current = current.next;
@@ -203,6 +205,47 @@ class LinkedList {
     }
     return false;
   }
+
+  toString() {
+    let current = this.head;
+    if (!current) throw new Error('Can not turn a null linked list into strings, add head.');
+
+    let finalString = '';
+    while (current) {
+      finalString = finalString + `{${current.data}} -> `;
+      current = current.next;
+    }
+    return finalString + 'null';
+  }
+
+
+  kth(k) {
+    let current = this.head;
+    // if (!current) throw new Error('haed does not exist');
+    let count = this.length; // to start from zero at the tail not one
+    console.log(count, k);
+    while (current) {
+      if (k === count) {
+        return current.data;
+      }
+      count--;
+      current = current.next;
+    }
+    return "exception";
+  }
+
+  //reverse a linkedList
+  reverseList(list) {
+    let node = this.head;
+    const list2 = new LinkedList();
+    while (node) {
+      list2.insertAtHead(node.data);
+      node = node.next;
+    }
+    return list2;
+  }
+
+
 
   //print data
 
