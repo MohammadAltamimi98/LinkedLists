@@ -245,6 +245,29 @@ class LinkedList {
     return list2;
   }
 
+  isPalindrome() {
+    let flag = true;
+    let slow = this.head;
+    let stack = [];
+
+    while (slow) {
+      stack.push(slow.data);
+      slow = slow.next;
+    }
+
+    while (this.head) {
+      let i = stack.pop();
+      if (this.head.data === i) {
+        flag = true;
+      } else {
+        flag = false;
+        break;
+      }
+      this.head = this.head.next
+    }
+    return flag;
+  }
+
 
 
   //print data

@@ -28,11 +28,13 @@ const ll = new LinkedList();
 
 // console.log(ll.includesVal(0));
 
-ll.insertLast(4);
-ll.insertLast(6);
-ll.insertLast(8);
-ll.insertLast(9);
+console.log(ll);
+ll.insertLast(1);
+ll.insertLast(2);
+ll.insertLast(2);
+ll.insertLast(1);
 console.log(ll);
 console.log("==========");
-const ll2 = ll.reverseList(ll);
-console.log(ll2);
+// const ll2 = ll.reverseList(ll);
+// console.log(ll2);
+console.log(ll.isPalindrome());
